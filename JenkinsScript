@@ -1,0 +1,20 @@
+pipeline{
+ agentany
+  Stages {
+      stage('Build'){
+        Steps{
+           sh 'chmod +X 1000_SampleScript'
+           Sh './1000_SampleScript'
+}
+}
+}
+
+post{
+  Success{
+     echo 'Deployment Successful'
+  }
+    failure {
+    echo'Deplyment Failed'
+}
+}
+}
