@@ -7,7 +7,7 @@ pool:
   vmImage: 'ubuntu-latest'  # Use a Linux VM
 
 steps:
-  - checkout: self  # This automatically fetches the correct repo
-
-  - script: ls -l  # Debugging: Check which files are available
-  - script: pip install -r Sample.txt  # Install dependencies
+  steps:
+  - script: |
+      bash Sample.sh
+    displayName: 'Run Sample Script'
