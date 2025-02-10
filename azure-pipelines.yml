@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include:
+      - main  # Runs pipeline when code is pushed to 'main'
+
+pool:
+  vmImage: 'ubuntu-latest'  # Use a Linux VM for the pipeline
+
+steps:
+  - checkout: self  # Pulls latest code from GitHub
+
+  - script: echo "Installing dependencies..."
+  - script: pip install -r requirements.txt  # Install dependencies (if applicable)
+
+  - script: echo "Running tests..."
+  - script: pytest test_app.py  # Run tests (replace with your test file)
+
+  - script: echo "Deployment step (customize this as needed)"
