@@ -7,7 +7,7 @@ pool:
   vmImage: 'ubuntu-latest'  # Use a Linux VM
 
 steps:
-  steps:
   - script: |
-      bash Sample.sh
-    displayName: 'Run Sample.txt Script'
+      javac Sample.java
+      java Sample
+    displayName: 'Compile and Run Java Program'
