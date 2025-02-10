@@ -10,7 +10,7 @@ steps:
   - checkout: self  # Pulls latest code from GitHub
 
   - script: echo "Installing dependencies..."
-  - script: pip install -r requirements.txt  # Install dependencies (if applicable)
+  - script: pip install -r 1000_SampleScript.txt  # Install dependencies (if applicable)
 
   - script: echo "Running tests..."
   - script: pytest test_app.py  # Run tests (replace with your test file)
